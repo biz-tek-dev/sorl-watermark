@@ -51,6 +51,7 @@ class WatermarkEngineBase(ThumbnailEngineBase):
                 'watermark_size'  in options or
                 'watermark_alpha' in options):
             image = self.watermark(image, options)
+            image = image.convert("RGB")
         return image
 
 
